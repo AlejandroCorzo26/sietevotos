@@ -1,0 +1,1073 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+:root {
+    --cream: #f8f6f0;
+    --paper: #fffefa;
+    --white: #ffffff;
+
+    --black: #24231f;
+    --dark: #302e29;
+
+    --gold: #ae8b4c;
+    --gold-light: #d8c39a;
+
+    --gray: #77736b;
+    --light-gray: #e8e4da;
+
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "DM Sans", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--black);
+    font-family: var(--sans);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+
+/* =====================================
+   NAVEGACIÓN
+===================================== */
+
+.navbar {
+    height: 76px;
+    width: 100%;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(248, 246, 240, 0.94);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(174, 139, 76, 0.18);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.brand-mark {
+    width: 30px;
+    height: 30px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--gold);
+    color: var(--gold);
+
+    font-family: var(--serif);
+    font-size: 17px;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.navbar nav a {
+    font-size: 12px;
+    color: var(--gray);
+    transition: color .3s;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+}
+
+.nav-button {
+    padding: 10px 20px;
+
+    border: 1px solid var(--gold);
+
+    color: var(--gold);
+
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    transition: .3s;
+}
+
+.nav-button:hover {
+    background: var(--gold);
+    color: white;
+}
+
+
+/* =====================================
+   ELEMENTOS GENERALES
+===================================== */
+
+.section {
+    padding: 115px 10%;
+}
+
+.eyebrow {
+    color: var(--gold);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 55px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.section-label span:first-child {
+    font-family: var(--serif);
+    font-size: 17px;
+}
+
+.section-label::after {
+    content: "";
+
+    width: 65px;
+    height: 1px;
+
+    background: var(--gold-light);
+}
+
+.gold-line {
+    width: 65px;
+    height: 2px;
+
+    margin: 28px 0;
+
+    background: var(--gold);
+}
+
+
+/* =====================================
+   PORTADA
+===================================== */
+
+.hero {
+    min-height: 680px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+
+    padding: 105px 12% 90px;
+
+    background:
+        radial-gradient(
+            circle at 85% 45%,
+            rgba(174, 139, 76, .09),
+            transparent 40%
+        ),
+        var(--cream);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    margin-top: 30px;
+
+    font-family: var(--serif);
+    font-size: clamp(55px, 7vw, 92px);
+
+    font-weight: 400;
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.hero-quote {
+    max-width: 430px;
+
+    font-family: var(--serif);
+    font-size: 23px;
+    line-height: 1.5;
+}
+
+.hero-description {
+    max-width: 470px;
+
+    margin-top: 22px;
+
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 35px;
+
+    margin-top: 38px;
+    padding: 15px 22px;
+
+    background: var(--black);
+    color: white;
+
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    transition: .3s;
+}
+
+.primary-button:hover {
+    background: var(--gold);
+    transform: translateY(-3px);
+}
+
+.primary-button span {
+    font-size: 18px;
+}
+
+.hero-side {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-number {
+    color: rgba(174, 139, 76, .15);
+
+    font-family: var(--serif);
+    font-size: clamp(180px, 24vw, 320px);
+    line-height: 1;
+}
+
+.hero-side-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-top: -25px;
+
+    color: var(--gray);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-decoration {
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border: 1px solid rgba(174, 139, 76, .3);
+    border-radius: 50%;
+}
+
+.hero-decoration::before {
+    content: "";
+
+    position: absolute;
+    inset: 20px;
+
+    border: 1px solid rgba(174, 139, 76, .2);
+    border-radius: 50%;
+}
+
+.hero-bottom {
+    position: absolute;
+
+    bottom: 25px;
+    left: 12%;
+    right: 12%;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--gray);
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================
+   PROPÓSITO
+===================================== */
+
+.purpose {
+    background: var(--white);
+}
+
+.purpose-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.purpose h2,
+.section-heading h2,
+.reflection-content h2 {
+    margin-top: 20px;
+
+    font-family: var(--serif);
+    font-size: clamp(38px, 4vw, 55px);
+
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.purpose h2 em,
+.reflection-content h2 em {
+    color: var(--gold);
+}
+
+.purpose-text {
+    padding-top: 12px;
+}
+
+.purpose-text p {
+    margin-bottom: 22px;
+
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.purpose-statement {
+    position: relative;
+
+    margin-top: 90px;
+    padding: 50px 70px;
+
+    background: var(--cream);
+
+    border-left: 2px solid var(--gold);
+}
+
+.statement-symbol {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+
+    color: var(--gold-light);
+
+    font-family: var(--serif);
+    font-size: 70px;
+}
+
+.purpose-statement p {
+    position: relative;
+
+    font-family: var(--serif);
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.statement-author {
+    display: block;
+
+    margin-top: 25px;
+
+    color: var(--gold);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================
+   SECCIÓN DE VOTOS
+===================================== */
+
+.vows-section {
+    background: var(--cream);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 50px;
+}
+
+.section-heading p {
+    max-width: 350px;
+
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.vow-index {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    margin: 65px 0;
+
+    border-top: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.vow-index a {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 22px 8px;
+
+    border-right: 1px solid var(--light-gray);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.vow-index a:first-child {
+    border-left: 1px solid var(--light-gray);
+}
+
+.vow-index a:hover {
+    background: var(--white);
+    color: var(--gold);
+}
+
+.vow-index span {
+    color: var(--gold);
+
+    font-family: var(--serif);
+    font-size: 20px;
+}
+
+
+/* =====================================
+   TARJETAS DE VOTOS
+===================================== */
+
+.vow-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 35px;
+
+    margin-bottom: 35px;
+    padding: 55px 60px;
+
+    background: var(--white);
+
+    border: 1px solid rgba(174, 139, 76, .12);
+
+    transition: box-shadow .3s, transform .3s;
+}
+
+.vow-card:hover {
+    box-shadow: 0 20px 50px rgba(40, 35, 25, .06);
+    transform: translateY(-3px);
+}
+
+.vow-number {
+    color: rgba(174, 139, 76, .25);
+
+    font-family: var(--serif);
+    font-size: 85px;
+    line-height: 1;
+}
+
+.vow-content {
+    min-width: 0;
+}
+
+.vow-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid var(--light-gray);
+
+    color: var(--gold);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.vow-category {
+    color: var(--gray);
+}
+
+.vow-content h3 {
+    margin-top: 25px;
+
+    font-family: var(--serif);
+    font-size: clamp(35px, 4vw, 48px);
+    font-weight: 400;
+}
+
+.vow-intro {
+    margin: 10px 0 30px;
+
+    color: var(--gray);
+    font-family: var(--serif);
+    font-size: 17px;
+    font-style: italic;
+}
+
+.vow-details {
+    border-top: 1px solid var(--light-gray);
+}
+
+.vow-details details {
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.vow-details summary {
+    position: relative;
+
+    padding: 18px 35px 18px 0;
+
+    cursor: pointer;
+    list-style: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: color .3s;
+}
+
+.vow-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.vow-details summary::after {
+    content: "+";
+
+    position: absolute;
+    right: 5px;
+    top: 12px;
+
+    color: var(--gold);
+
+    font-size: 21px;
+    font-weight: 400;
+
+    transition: transform .3s;
+}
+
+.vow-details details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.vow-details summary:hover {
+    color: var(--gold);
+}
+
+.vow-details details p {
+    max-width: 750px;
+
+    padding: 0 25px 20px 0;
+
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.personal-reflection {
+    margin-top: 30px;
+    padding: 25px 28px;
+
+    background: var(--cream);
+
+    border-left: 2px solid var(--gold);
+}
+
+.personal-reflection span {
+    color: var(--gold);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.personal-reflection p {
+    margin-top: 12px;
+
+    color: var(--dark);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* =====================================
+   PRÁCTICA DIARIA
+===================================== */
+
+.daily-practice {
+    margin-top: 30px;
+    padding-top: 25px;
+
+    border-top: 1px solid var(--light-gray);
+}
+
+.practice-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.practice-heading strong {
+    font-size: 12px;
+}
+
+.practice-heading span {
+    color: var(--gray);
+    font-size: 10px;
+}
+
+.week-days {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.week-days label {
+    cursor: pointer;
+}
+
+.week-days input {
+    display: none;
+}
+
+.week-days span {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--light-gray);
+    border-radius: 50%;
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    transition: .3s;
+}
+
+.week-days label:hover span {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.week-days input:checked + span {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: white;
+}
+
+
+/* =====================================
+   REFLEXIÓN GENERAL
+===================================== */
+
+.reflection-section {
+    background: var(--white);
+}
+
+.reflection-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.reflection-content h2 {
+    margin-bottom: 35px;
+}
+
+.reflection-content p {
+    margin-bottom: 20px;
+
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* =====================================
+   COMPROMISO FINAL
+===================================== */
+
+.final-section {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 620px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 100px 10%;
+
+    background: var(--black);
+    color: var(--white);
+}
+
+.final-decoration {
+    position: absolute;
+
+    right: -80px;
+    bottom: -170px;
+
+    color: rgba(174, 139, 76, .08);
+
+    font-family: var(--serif);
+    font-size: 650px;
+    line-height: 1;
+}
+
+.final-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 700px;
+    text-align: center;
+}
+
+.final-content h2 {
+    margin-top: 25px;
+
+    font-family: var(--serif);
+    font-size: clamp(45px, 6vw, 70px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.centered {
+    margin: 30px auto;
+}
+
+.final-content > p:not(.final-quote) {
+    max-width: 590px;
+
+    margin: 0 auto 20px;
+
+    color: #c5c0b6;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.final-quote {
+    margin-top: 40px;
+
+    color: var(--gold-light);
+
+    font-family: var(--serif);
+    font-size: 21px;
+    font-style: italic;
+}
+
+.signature {
+    display: block;
+
+    margin-top: 50px;
+
+    color: var(--white);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.final-caption {
+    display: block;
+
+    margin-top: 12px;
+
+    color: var(--gold);
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 8%;
+
+    background: #211f1b;
+    color: #aaa49a;
+}
+
+.footer-brand {
+    color: var(--white);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.footer span {
+    font-size: 10px;
+}
+
+.back-top {
+    color: var(--gold-light);
+
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        gap: 18px;
+    }
+
+    .hero {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .purpose-grid {
+        gap: 45px;
+    }
+
+    .vow-card {
+        padding: 40px;
+    }
+
+    .vow-index {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: 65px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .brand {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .nav-button {
+        padding: 8px 13px;
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 650px;
+
+        grid-template-columns: 1fr;
+
+        padding: 90px 8% 100px;
+    }
+
+    .hero h1 {
+        font-size: 62px;
+    }
+
+    .hero-side {
+        position: absolute;
+
+        right: -25px;
+        bottom: 90px;
+
+        opacity: .5;
+    }
+
+    .hero-number {
+        font-size: 180px;
+    }
+
+    .hero-decoration {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-bottom {
+        left: 8%;
+        right: 8%;
+    }
+
+    .section {
+        padding: 85px 7%;
+    }
+
+    .section-label {
+        margin-bottom: 35px;
+    }
+
+    .purpose-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .purpose-statement {
+        margin-top: 55px;
+        padding: 45px 30px;
+    }
+
+    .purpose-statement p {
+        font-size: 20px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .vow-index {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 40px 0;
+    }
+
+    .vow-card {
+        grid-template-columns: 1fr;
+        gap: 10px;
+
+        padding: 30px 23px;
+    }
+
+    .vow-number {
+        font-size: 55px;
+    }
+
+    .vow-content h3 {
+        font-size: 36px;
+    }
+
+    .vow-top {
+        font-size: 8px;
+    }
+
+    .personal-reflection {
+        padding: 20px;
+    }
+
+    .week-days {
+        gap: 8px;
+    }
+
+    .week-days span {
+        width: 32px;
+        height: 32px;
+    }
+
+    .final-section {
+        min-height: 580px;
+        padding: 80px 8%;
+    }
+
+    .final-decoration {
+        font-size: 400px;
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 51px;
+    }
+
+    .vow-card {
+        padding: 25px 17px;
+    }
+
+    .week-days {
+        gap: 5px;
+    }
+
+    .week-days span {
+        width: 29px;
+        height: 29px;
+    }
+
+}
